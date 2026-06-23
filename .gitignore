@@ -24,4 +24,11 @@ Thumbs.db
 # Temp files
 *.tmp
 ~$*
+
+# Not needed in repo
 cGAN_tutorial/
+*.docx
+*.qgz
+*.log
+*.sr.lock
+__MACOSX/
