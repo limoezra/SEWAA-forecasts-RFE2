@@ -1,0 +1,27 @@
+# Large data files — do NOT push to GitHub
+IFS_training/
+RFE/
+RFE_zips/
+rfe_tfrecords/
+*.tfrecords
+
+# Model weights and logs
+logs_RFE2_run*/
+SEWAA-forecasts/24h_accumulations/cGAN/logs_RFE2_run*/
+
+# SEWAA-forecasts has its own git repo — exclude its .git
+SEWAA-forecasts/.git/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Temp files
+*.tmp
+~$*
+cGAN_tutorial/
