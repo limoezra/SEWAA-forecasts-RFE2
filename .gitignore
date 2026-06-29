@@ -32,3 +32,4 @@ cGAN_tutorial/
 *.log
 *.sr.lock
 __MACOSX/
+SEWAA-forecasts/.git_backup/

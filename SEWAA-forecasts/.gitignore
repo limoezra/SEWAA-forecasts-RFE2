@@ -1,0 +1,13 @@
+# OS generated files #
+######################
+.DS_Store
+**/__pycache__/
+.venv
+.env
+.ssh
+# Jupyter Notebook
+.ipynb_checkpoints
+*.env
+*.json
+data
+*.nc
