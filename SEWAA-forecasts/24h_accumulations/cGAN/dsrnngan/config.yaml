@@ -7,7 +7,7 @@ MODEL:
     padding: "reflect"  # convolution padding: 'same', 'reflect', or 'symmetric'
         
 SETUP:
-    log_folder: "../logs_RFE2_run03"
+    log_folder: "../logs_RFE2_run04"
 
 GENERATOR:
     filters_gen: 32  # full run
@@ -22,11 +22,11 @@ DISCRIMINATOR:
 TRAIN:
     train_years: [2018, 2019, 2020, 2021]
     training_weights: [0.4, 0.3, 0.2, 0.1]  # frequency to sample from each bin
-    num_samples: 15872  # actual samples trained so far
-    steps_per_checkpoint: 64  # saves more often
-    batch_size: 4
+    num_samples: 204800  # full run on GPU server
+    steps_per_checkpoint: 128  # back to Fenwick's default
+    batch_size: 8  # bigger batch, RTX 5000 has 30GB
     kl_weight: 1e-8  # used for VAEGAN
-    ensemble_size: 4  # reduced for speed
+    ensemble_size: 8  # full ensemble, GPU can handle it
     CL_type: "ensmeanMSE"  # type of content loss to use: 'CRPS', 'CRPS_phys', 'ensmeanMSE', 'ensmeanMSE_phys'
     content_loss_weight: 1000.0  # we used 1000 for ensmeanMSE, and 100 for CRPS
 
